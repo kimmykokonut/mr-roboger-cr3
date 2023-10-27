@@ -42,3 +42,28 @@ function findReplace(array, findValue, replaceValue) {
   array[array.indexOf(findValue)] = replaceValue, array
   return array
 } 
+
+function handleSelect(event) {
+  event.preventDefault();
+  const nameInput = document.getElementById("nameInput").value;
+  const numberInput = parseInt(document.getElementById("numberInput").value);
+  let result = beepBoop(numberInput); 
+  console.log(result);
+  const div = document.getElementById("results");
+  const ul = document.createElement("ul");
+  div.append(ul);
+  result.forEach(function(item) {
+    let li = document.createElement("li");
+    li.append(item);
+    ul.append(li);
+  });
+}
+
+window.addEventListener("load", function() {
+  let form = document.querySelector("form");
+  let resetBtn = document.querySelector("button#reset");
+  // ? let results? to make input boxes null
+  form.addEventListener("submit", handleSelect);
+   
+  document.querySelector("div#results").removeAttribute("class");
+});
