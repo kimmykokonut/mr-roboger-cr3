@@ -4,7 +4,6 @@ function beepBoop(inputNumber) {
     numberArray.push(num);
   }
   console.log(numberArray);
-  // return assessDigit(numberArray)
   return singledDigit(numberArray);
 }
 
@@ -21,10 +20,10 @@ function singledDigit(numberArray) {
       } else {
         singleArray.push(element);
       }
-  console.log(singleArray);
   }
+  console.log(singleArray);
+  return assessDigit(singleArray);
 }
-
 
 function assessDigit(array) {
   if (array.includes(1)) {

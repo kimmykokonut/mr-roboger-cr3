@@ -38,4 +38,3 @@ Expected Output: [0, "Beep", "Boop"..."Won't you be my neighbor?", "Beep"]
 Test: "It should report an error if non-number is entered"
 Code: beepBoop("hello")
 Expected Output: "Not a number, try again"
-
