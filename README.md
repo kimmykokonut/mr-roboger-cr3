@@ -25,6 +25,10 @@ Test: "It should replace numbers that contain a "3" with "Won't you be my neighb
 Code: assessDigit(5)
 Expected Output: [0, "Beep", "Boop", "Won't you be my neighbor?", 4, 5]
 
+Test: "It should replace 1,2,3 for the new values over 9"
+Code: assessDigit([0, 1, 2, ... 13, 14])
+Expected Output: [0, "Beep", "Boop"..."Won't you be my neighbor?", "Beep"]
+
 Describe: singledDigit()
 
 Test: "It should search a double digit number if itcontains 1, 2,or 3 and replace as single digit"
@@ -33,8 +37,4 @@ Expected Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1]
 
 Test: "It should prioritize "3" response over "1" in double digit-numbers"
 Code: singledDigit ([0, 1, 2, ... 13, 14])
-Expected Output: [0, "Beep", "Boop"..."Won't you be my neighbor?", "Beep"]
-
-Test: "It should report an error if non-number is entered"
-Code: beepBoop("hello")
-Expected Output: "Not a number, try again"
+Expected Output: [0, "Beep", "Boop"..."Won't you be my neighbor?", "Beep"] 
