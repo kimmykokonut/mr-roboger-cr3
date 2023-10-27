@@ -1,7 +1,3 @@
-// enter 1 get beep
-
-testArray = [0, 1, 2, 3]
-
 function beepBoop(inputNumber) {
   let numberArray = [];
   for (let num = 0; num <= inputNumber; num++) {
@@ -16,10 +12,12 @@ function singledDigit(numberArray) {
   let singleArray = [];
   for (const element of numberArray) {
       let digits = element.toString().split('');
-      console.log(digits);
       if (digits.includes('3')) {
         singleArray.push(3);
-        console.log(numberArray);
+      } else if (digits.includes('2')) {
+        singleArray.push(2);
+      } else if (digits.includes('1')) {
+        singleArray.push(1);
       } else {
         singleArray.push(element);
       }
