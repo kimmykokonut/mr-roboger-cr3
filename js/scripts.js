@@ -1,6 +1,6 @@
 // enter 1 get beep
 
-testArray = [0,1,2,3]
+testArray = [0, 1, 2, 3]
 
 function beepBoop(inputNumber) {
   let numberArray = [];
@@ -8,13 +8,30 @@ function beepBoop(inputNumber) {
     numberArray.push(num);
   }
   console.log(numberArray);
-  return assessDigit(numberArray)
+  // return assessDigit(numberArray)
+  return singledDigit(numberArray);
 }
+
+function singledDigit(numberArray) {
+  let singleArray = [];
+  for (const element of numberArray) {
+      let digits = element.toString().split('');
+      console.log(digits);
+      if (digits.includes('3')) {
+        singleArray.push(3);
+        console.log(numberArray);
+      } else {
+        singleArray.push(element);
+      }
+  console.log(singleArray);
+  }
+}
+
 
 function assessDigit(array) {
   if (array.includes(1)) {
     findReplace(array, 1, "Beep!");
-  } 
+  }
   if (array.includes(2)) {
     findReplace(array, 2, "Boop!");
   }
