@@ -49,6 +49,9 @@ function handleSelect(event) {
   const numberInput = parseInt(document.getElementById("numberInput").value);
   let result = beepBoop(numberInput); 
   const div = document.getElementById("results");
+  const sayName = document.createElement("h4");
+  sayName.append("Be my neighbor, " + nameInput + "?");
+  div.append(sayName);
   const ul = document.createElement("ul");
   div.append(ul);
   result.forEach(function(item) {
