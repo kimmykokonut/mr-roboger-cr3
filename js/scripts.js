@@ -71,8 +71,8 @@ window.addEventListener("load", function() {
     divResults = document.querySelector("div#results");
     divResults.setAttribute("class", "hidden");
     document.getElementById("nameInput").value = null;
-    document.getElementById("numberInput").value = null;
+    document.getElementById("numberInput").value = null;   
     resetBtn.setAttribute("class", "hidden");
-  });
-
+    window.location.reload(true);
+  })
 });
