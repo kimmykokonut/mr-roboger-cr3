@@ -7,13 +7,24 @@ function beepBoop(inputNumber) {
   for (let num = 0; num <= inputNumber; num++) {
     numberArray.push(num);
   }
-  return numberArray;
+  console.log(numberArray);
+  return assessDigit(numberArray)
+}
+
+function assessDigit(array) {
+  if (array.includes(1)) {
+    findReplace(array, 1, "Beep!");
+  } 
+  if (array.includes(2)) {
+    findReplace(array, 2, "Boop!");
+  }
+  if (array.includes(3)) {
+    findReplace(array, 3, "Won't you be my neighbor?");
+  }
+  return array
 }
 
 function findReplace(array, findValue, replaceValue) {
   array[array.indexOf(findValue)] = replaceValue, array
   return array
 } 
-
-
-findReplace(testArray, 1, "Beep!")
