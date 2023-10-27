@@ -1,31 +1,40 @@
-* {
-  border: 2px, solid, red;
-}
 body {
   background-image: url(/img/red-knit.jpg);
   font-family: 'Gentium Book Plus', serif;
 }
 .flex-container {
-  margin: 5%;
+  margin: 3%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  gap: 15px;
+}
+
+h1 {
+  text-align: center;
+  background-color: #e69549;
+  border: 2px dashed #2684a3;
+  border-radius: 15%;
+  padding: 1%;
+  margin-right: 3%;
+  margin-left: 3%;
 }
 
 #header {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  margin: 1%;
 }
 
 img {
-  border: 1px solid black;
+  border: 3px solid black;
 }
 
 #intro {
-  background-color: bisque;
-  border: 3px dashed grey;
-  padding: 2%;
+  background-color: #2684a3;
+  border: 3px dashed #809ca6;
   text-align: center;
   font-size: 1.5em;
 }
@@ -34,24 +43,25 @@ h1 {
   font-size: 50px;
 }
 
+#row {
+  display: flex;
+  flex-direction: row;
+}
+
 #form {
-  background-color: cadetblue;
-  border: 3px solid darkred;
+  background-color: #809ca6;
+  border: 3px dashed #e69549;
   padding: 3%;
   font-size: 1.5em;
-
+  margin-left: 5%;
 }
 
 #results {
-  background-color: rgb(20, 133, 20);
-  border: 3px dashed greenyellow;
-  padding: 3%;
+  background-color: #a66005;
+  border: 3px dashed #2684a3;
   font-size: 1.5em;
   align-items: center;
-}
-
-#clear-button {
-
+  gap: 3%;
 }
 
 .hidden {
