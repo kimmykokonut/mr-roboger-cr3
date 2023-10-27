@@ -1,5 +1,6 @@
-// enter 0 get array
+// enter 1 get beep
 
+testArray = [0,1,2,3]
 
 function beepBoop(inputNumber) {
   let numberArray = [];
@@ -8,3 +9,11 @@ function beepBoop(inputNumber) {
   }
   return numberArray;
 }
+
+function findReplace(array, findValue, replaceValue) {
+  array[array.indexOf(findValue)] = replaceValue, array
+  return array
+} 
+
+
+findReplace(testArray, 1, "Beep!")
