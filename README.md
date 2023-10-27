@@ -9,7 +9,8 @@ Expected Output: [0]
 Describe: findReplace()
 
 Test: "It should find a specific value in an array and replace it with another value"
-Code: findReplace([0, 1], 1, "Beep!")
+Code: findReplace([0,1], 1, "Beep!") 
+Expected Output: [0, "Beep!"]
 
 Describe: assessDigit()
 
@@ -31,7 +32,7 @@ Expected Output: [0, "Beep", "Boop"..."Won't you be my neighbor?", "Beep"]
 
 Describe: singledDigit()
 
-Test: "It should search a double digit number if itcontains 1, 2,or 3 and replace as single digit"
+Test: "It should search a double digit number if it contains 1, 2, or 3 and replace as single digit"
 Code: singledDigit([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 Expected Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1]
 
