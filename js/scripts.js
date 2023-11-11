@@ -1,26 +1,18 @@
 function beepBoop(inputNumber) {
   let numberArray = [];
   for (let num = 0; num <= inputNumber; num++) {
-    numberArray.push(num);
-  }
-  return singledDigit(numberArray);
-}
-
-function singledDigit(numberArray) {
-  let singleArray = [];
-  for (const element of numberArray) {
-    let digits = element.toString().split('');
+    let digits = num.toString().split('');
     if (digits.includes('3')) {
-      singleArray.push(3);
+      numberArray.push(3);
     } else if (digits.includes('2')) {
-      singleArray.push(2);
+      numberArray.push(2);
     } else if (digits.includes('1')) {
-      singleArray.push(1);
+      numberArray.push(1);
     } else {
-      singleArray.push(element);
+      numberArray.push(num);
     }
   }
-  return assessDigit(singleArray);
+  return assessDigit(numberArray);
 }
 
 function assessDigit(array) {
@@ -70,7 +62,7 @@ window.addEventListener("load", function () {
     resetBtn.removeAttribute("class");
   })
   resetBtn.addEventListener("click", function () {
-    divResults = document.querySelector("div#results");
+    const divResults = document.querySelector("div#results");
     divResults.setAttribute("class", "hidden");
     document.getElementById("nameInput").value = null;
     document.getElementById("numberInput").value = null;
